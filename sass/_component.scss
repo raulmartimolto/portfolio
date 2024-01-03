@@ -1,0 +1,463 @@
+// * VIDEO COMPONENT
+.video-bg {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -100;
+}
+
+// * ICONO VER MÁS
+.icono-ver-mas {
+  width: 3rem;
+  animation: bounce 1.5s infinite ease-in-out;
+}
+
+// * BUTTON
+
+.btn {
+  font-size: 2.2rem;
+  padding: 1.2rem 3rem;
+  font-weight: 400;
+  border-radius: 3rem;
+  cursor: pointer;
+  text-decoration: none;
+
+  &--portfolio {
+    border: 1px solid $color-tertiary;
+    background-color: #fff;
+    color: $color-tertiary;
+
+    transition: all 0.3s ease-in-out;
+
+    &:not(:last-child) {
+      margin-right: 5rem;
+    }
+
+    &:hover {
+      color: #fff;
+      background-color: $color-tertiary;
+      transform: translateY(-1rem);
+    }
+
+    &:active {
+      transform: translateY(1rem);
+    }
+  }
+
+  &--cv {
+    border: 1px solid $color-tertiary;
+    background-color: $color-tertiary;
+    color: #fff;
+    transition: all 0.3s ease;
+
+    &:hover {
+      color: $color-tertiary;
+      background-color: #fff;
+      transform: translateY(-1rem);
+    }
+
+  }
+
+  &--active {
+    background-color: $color-tertiary;
+    color: #fff;
+  }
+}
+
+// * MENU ICON - ALWAYS TOP RIGHT
+.menu-icon {
+  position: fixed;
+  z-index: 1;
+  @include menuButtonsPositions;
+}
+
+// * NAV
+.nav {
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100vh;
+  background-color: $color-secondary-2;
+  display: none;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  .heading-secondary {
+    position: absolute;
+    left: 2%;
+    top: 2%;
+  }
+
+  &__links {
+    list-style: none;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 3rem;
+    }
+
+    &:hover:before {
+      height: 100%;
+    }
+  }
+
+  // * BEFORE ITEM
+  &__link::before {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 3px;
+    background-color: $color-bg-1;
+    transform-origin: bottom;
+    transform: scaleY(0);
+    transition: transform 0.3s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.3s, background-color 0.1s;
+  }
+
+  &__link:hover:before,
+  &__link--active:before {
+    transform: scaleY(1);
+    width: 100%;
+  }
+
+  // ---------------
+
+  &__link {
+    position: relative;
+    z-index: 10;
+    text-transform: capitalize;
+    font-size: 5rem;
+    text-decoration: none;
+    color: #fff;
+    z-index: 10;
+  }
+
+  &__close {
+    position: absolute;
+    width: 4rem;
+    @include menuButtonsPositions;
+  }
+}
+
+// * SKILLS
+
+.skills {
+  background-image: url(../assets/img/bg-skills.svg);
+  background-origin: border-box;
+  background-position: top;
+  background-size: cover;
+  &__heading {
+    padding-top: 9rem;
+  }
+
+  &__container {
+    padding: 7rem 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    -webkit-overflow-scrolling: touch;
+    max-width: 120rem;
+    margin: 0 auto;
+    @include respond(tab-port) {
+      padding: 7rem 6rem;
+      overflow-x: auto;
+      justify-content: flex-start;
+    }
+
+    @include respond(phone) {
+      padding: 8rem 3rem;
+    }
+  }
+
+  &__box {
+    position: relative;
+    box-shadow: 1rem 2rem 1.5rem rgba(#000, 0.64);
+    height: 48rem;
+    width: 33.333%;
+    flex: 0 0 33.333%;
+    background-color: #fff;
+    border-radius: 5rem;
+    border: 2px solid #fff;
+    transition: transform 0.3s ease-in-out;
+
+    &:not(:last-child) {
+      margin-right: 5rem;
+      @include respond(tab-land) {
+        margin-right: 3rem;
+      }
+    }
+
+    &:hover {
+      transform: translateY(-3rem);
+    }
+
+    @include respond(tab-port) {
+      flex: 0 0 85%;
+      margin-bottom: 8rem;
+    }
+
+    @include respond(phone) {
+      width: 85%;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__title {
+    padding-top: 3.5rem;
+  }
+
+  &__list {
+    padding: 1.5rem 6rem 3rem 6rem;
+    list-style: none;
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-weight: 300;
+    font-size: 2rem;
+    line-height: 2.4em;
+    &::before {
+      content: '';
+      margin-right: 1.5rem;
+      min-width: 20px;
+      min-height: 15px;
+      background-image: url('../assets/img/icons/tick-icon.svg');
+    }
+  }
+}
+
+// * PORTFOLIO
+
+.portfolio {
+  &__buttons {
+  }
+
+  &__cards {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 125rem;
+    margin: 0 auto;
+    padding: 4rem 0rem;
+
+    @include respond(tab-land) {
+      padding: 0rem 3rem;
+    }
+    @include respond(tab-port) {
+      justify-content: center;
+      padding: 0rem 2rem;
+    }
+
+    @include respond(phone) {
+      padding: 2rem;
+    }
+  }
+
+  &__card {
+    flex: 0 0 calc(33.3333% - 2rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    // width: 80%;
+    height: 60rem;
+    max-height: 65rem;
+    box-shadow: 0.5rem 2rem 2.5rem rgba(#000, 0.4);
+    background-color: rgb(255, 250, 250);
+    border-radius: 0.5rem;
+    margin-bottom: 2rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+
+    transition: transform 0.2s ease;
+    cursor: pointer;
+
+    &:hover {
+      transform: translateY(-1rem) scale(1.012);
+    }
+
+    @include respond(phone) {
+      margin-right: 0;
+      max-height: 60rem;
+    }
+
+    @include respond(tab-land) {
+      height: 65rem;
+    }
+
+    @include respond(tab-port) {
+      flex: 0 0 calc(50% - 2rem);
+      height: 70rem;
+    }
+
+    @include respond(phone) {
+      flex: 0 0 calc(100% - 2rem);
+    }
+  }
+
+  &__text {
+    padding: 2rem 3rem 0rem 3rem;
+    height: 30rem;
+    max-height: 35rem;
+  }
+
+  .paragraph-small {
+    margin-top: 1rem;
+  }
+
+  &__img {
+    width: 100%;
+    height: 28rem;
+    min-height: 28rem;
+    background-clip: content-box;
+    object-fit: cover;
+    object-position: top center;
+    border-top-right-radius: 0.5rem;
+    border-top-left-radius: 0.5rem;
+  }
+
+  &__more {
+    padding: 2rem 3rem;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__links {
+    align-self: flex-end;
+    display: flex;
+    align-items: center;
+  }
+
+  &__link {
+    cursor: pointer;
+    &:not(:last-child) {
+      margin-right: 1rem;
+    }
+  }
+
+  &__link-img {
+    width: 3rem;
+  }
+
+  &__tags {
+    flex: 1;
+    margin-left: auto;
+    font-size: 1.5rem;
+    color: $color-grey-1;
+    text-align: right;
+  }
+}
+
+// * CONTACT
+
+.contact {
+  &__info {
+    padding-top: 7rem;
+    display: flex;
+    justify-content: space-around;
+
+    @include respond(phone) {
+      flex-direction: column;
+    }
+  }
+
+  &__call {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @include respond(phone) {
+      margin-bottom: 6rem;
+    }
+  }
+
+  &__email {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__icon {
+    width: 10rem;
+
+    &:hover {
+      animation: pulse 0.7s ease infinite;
+    }
+  }
+
+  &__link {
+    margin-top: 2rem;
+    color: #fff;
+    text-decoration: none;
+    font-size: 2.5rem;
+
+    @include respond(phone) {
+      font-size: 2rem;
+    }
+  }
+}
+
+
+// spinner
+.spinner {
+  width: 40px;
+  height: 40px;
+
+  position: relative;
+  margin: 100px auto;
+}
+
+.double-bounce1, .double-bounce2 {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: rgb(209, 204, 204);
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+  -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+  animation: sk-bounce 2.0s infinite ease-in-out;
+}
+
+.double-bounce2 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+
+@-webkit-keyframes sk-bounce {
+  0%, 100% { -webkit-transform: scale(0.0) }
+  50% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes sk-bounce {
+  0%, 100% { 
+    transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+  } 50% { 
+    transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+  }
+}

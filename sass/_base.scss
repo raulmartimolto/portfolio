@@ -1,0 +1,188 @@
+// * RESET CSS
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+  outline: inherit;
+}
+
+html {
+  font-size: 62.5%;
+
+  @include respond(tab-land) {
+    // width < 1200?
+    font-size: 56.25%; //1 rem = 9px, 9/16 = 50%
+  }
+
+  @include respond(tab-port) {
+    // width < 900?
+    font-size: 50%; //1 rem = 8px, 8/16 = 50%
+  }
+
+  @include respond(mobile) {
+    font-size: 40%; //1 rem = 8px, 8/16 = 50%
+  }
+
+  @include respond(big-desktop) {
+    font-size: 75%; //1rem = 12, 12/16
+  }
+}
+
+body {
+  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 300;
+  outline: none;
+  position: relative;
+  display: block;
+  margin: 0 auto;
+}
+
+h1::selection,
+h2::selection,
+h3::selection,
+h4::selection,
+p::selection,
+a::selection,
+span::selection {
+  background-color: $color-secondary;
+  color: #fff;
+}
+
+// * TYPOGRAPHY
+.heading-primary {
+  font-size: 9.5rem;
+  font-weight: 600;
+
+  &--uppercase {
+    text-transform: uppercase;
+  }
+
+  &--text-white {
+    color: #fff;
+  }
+
+  @include respond(phone) {
+    font-size: 6rem;
+  }
+}
+
+.heading-secondary {
+  font-weight: bold;
+  font-size: 4.2rem;
+  color: #fff;
+  position: relative;
+  backface-visibility: hidden;
+  transition: transform 0.3s ease-out;
+
+  &:hover {
+    transform: rotate(2deg) scale(1.1);
+  }
+
+  @include respond(phone) {
+    font-size: 3.5rem;
+  }
+  // &:not(.typewriter):after{
+  //   content: "";
+  //   position: absolute;
+  //   width: 100%;
+  //   top: 85%;
+  //   left: 90%;
+  //   width: 35px;
+  //   height: .5rem;
+  //   background-image: url('../assets/img/icons/underscore.svg');
+  // }
+}
+
+.heading-tertiary {
+  font-size: 3.2rem;
+  font-weight: bold;
+
+  @include respond(phone) {
+    font-size: 2.8rem;
+  }
+}
+
+.heading-quaternary {
+  font-size: 2.8rem;
+  font-weight: 500;
+}
+
+.paragraph {
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: #fff;
+}
+
+.paragraph-small {
+  font-size: 1.8rem;
+  font-weight: 300;
+}
+
+// * HELPERS
+.stop-scrolling {
+  height: 100%;
+  overflow: hidden;
+}
+
+.show-flex {
+  display: flex !important;
+}
+
+.hide {
+  display: none;
+}
+
+strong {
+  font-weight: 600;
+}
+
+.typewriter {
+  width: 8em;
+  border-right: 2px solid rgba(255, 255, 255, 0.75);
+  white-space: nowrap;
+  overflow: hidden;
+  transform: translateY(-50%);
+  animation: typewriter 3s steps(40) 1s 1 normal both, blinkTextCursor 800ms steps(40) infinite normal;
+}
+
+/* UTILITIES */
+.u-margin-top-small {
+  margin-top: 2rem;
+}
+
+.u-margin-top-medium {
+  margin-top: 5rem;
+}
+
+.u-padding-top-medium {
+  padding-top: 5rem;
+}
+
+.u-margin-bottom-small {
+  margin-bottom: 2rem;
+}
+.u-margin-bottom-medium {
+  margin-bottom: 5rem;
+}
+.u-block-center {
+  display: block;
+  margin: 0 auto;
+}
+
+.u-text-center {
+  text-align: center;
+}
+#not-supported {
+  display: none;
+}
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  body {
+    display: none;
+  }
+  #not-supported {
+    display: block;
+  }
+}

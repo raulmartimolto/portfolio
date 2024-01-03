@@ -1,0 +1,83 @@
+[
+  {
+    "nombre": "Memeteca",
+    "texto": "Aplicación para subir imágenes y compartirlas con mi grupo de amigos. Utiliza firebase y he podido experimentar con su login/storage/db/hosting",
+    "categorias": ["Javascript", "Vue", "Firebase"],
+    "imagen": "meme-no-se.jpg",
+    "links": ["https://github.com/jorgemartiinez/AvanzaMemeteca", "https://avanza-memeteca-63aa4.web.app", null]
+  },
+  {
+    "nombre": "Avanza",
+    "texto": "Aplicación en la que llevo trabajando a nivel profesional 2 años. La usa la empresa a nivel interno para la gestión de prenvención de riesgos laborales y demás. Por contrato no puedo enseñar mucho :(",
+    "categorias": ["Laravel", "CSS", "Javascript", "Vue", "SQL"],
+    "imagen": "avanza.svg",
+    "links": [null, null, null]
+  },
+  {
+    "nombre": "Pets Shield",
+    "texto": "He creado una pequeña demo de una app que sirve para poner anuncios y buscar un nuevo dueño a tu mascota en caso de que no puedas hacerte cargo de ella. He probado TailwindCSS y me he puesto al día con Laravel 5.",
+    "categorias": ["Laravel", "TailwindCSS"],
+    "imagen": "pets-app.svg",
+    "links": ["https://github.com/jorgemartiinez/Pets-Demo", null, "https://youtu.be/A8O3dLH0evw"]
+  },
+  {
+    "nombre": "CineVue",
+    "texto": "Proyecto que sirve para ver información sobre películas, series y demás. He utilizado la API de TheMovieDB. Me ha servido para tratar algunos temas de Vue como el infinite scroll. Falta terminar el responsive.",
+    "categorias": ["Vue", "SASS", "CSS"],
+    "imagen": "cinevue.jpg",
+    "links": ["https://github.com/jorgemartiinez/cinevue", "https://cinevue.netlify.app/", "https://youtu.be/MzsoCL8t96Y"]
+  },
+{
+    "nombre": "Quizzery",
+    "texto": "Proyecto para crear cuestionarios hecho con VueJS, desarrollado para aprender a utilizar Vuex y demás, y ponerme al día con el framework depués de llevar un tiempo sin utilizarlo. Para el backend utilizo Firebase.",
+    "categorias": ["Vue", "SASS", "CSS"],
+    "imagen": "quizzery.svg",
+    "links": ["https://github.com/jorgemartiinez/Quizzery", null, "https://youtu.be/i5sOK_a3IAM"]
+  },
+  {
+    "nombre": "Web Limpiezas Y Decapados",
+    "texto": "Proyecto en el que creé una página web para un cliente que tiene una empresa de servicio de limpiezas y demás. Se ha podido obtener una buena velocidad junto a un diseño moderno.",
+    "categorias": ["CSS", "SASS", "PHP", "Javascript"],
+    "imagen": "limpiezasydecapados.jpg",
+    "links": ["https://github.com/jorgemartiinez/limpiezasyfachadas", null, null]
+  },
+  {
+    "nombre": "Web Copistería",
+    "texto": "Proyecto en el que creé una página web para un cliente que tiene una copistería. Creé primero la página estática y luego la convertí a Wordpress.",
+    "categorias": ["CSS", "PHP", "Javascript", "Wordpress"],
+    "imagen": "copisteria.png",
+    "links": ["https://github.com/jorgemartiinez/copisteriasanjorge", null, null]
+  },
+  {
+    "nombre": "Página Portfolio",
+    "texto": "Proyecto en el que he creado esta misma página web que me servirá de currículum y para mostrar los trabajos/proyectos que vaya realizando.",
+    "categorias": ["CSS", "SASS", "PHP", "Javascript"],
+    "imagen": "bg-1.jpg",
+    "links": ["https://github.com/jorgemartiinez/portfolio-site", null, null]
+  },
+  {
+    "nombre": "Web Real Estate",
+    "texto": "Proyecto que realicé para un cliente que quería una web para su empresa. Utilicé Wordpress con el plugin Elementor, y añadí mi propio CSS y JS para varias modificaciones.",
+    "categorias": ["Wordpress", "CSS", "Javascript"],
+    "imagen": "realestate.jpg",
+    "links": [null, "https://realestate-leader.es/", null]
+  },
+  {
+    "nombre": "Proyecto Final Grado",
+    "texto": "Durante las prácticas de DAW creé un panel de administración que sirve para realizar un control de horas de los clientes, con una nota de 9/10. Demo en Youtube.",
+    "categorias": ["PHP", "Javascript", "SQL"],
+    "imagen": "php.jpg",
+    "links": [
+      "https://github.com/jorgemartiinez/Control-Horas",
+      "https://control.pandacreatiu.com",
+      "https://www.youtube.com/watch?v=OwuN-26fTXo&feature=youtu.be"
+    ]
+  },
+  {
+    "nombre": "Integrador DAW",
+    "texto": "Proyecto integrador del ciclo de DAW. Se crea un sitio web para boy scauts y panel de administración para el mismo. Obtuvimos una nota de 9/10.",
+    "categorias": ["Laravel", "Vue"],
+    "imagen": "integrador.jfif",
+    "links": ["https://github.com/jorgemartiinez/Proyecto-Integrador-DAW", null, null]
+  }
+]

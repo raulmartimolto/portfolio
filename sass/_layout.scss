@@ -1,0 +1,81 @@
+// * PAGE LAYOUT CONTAINERS
+
+.header {
+  position: relative;
+  background-image: linear-gradient(to right bottom, rgba($color-bg-1, 0.6), rgba($color-bg-2, 0.6));
+  background-size: auto;
+  height: 100vh;
+
+  &__box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+  &__logos {
+    margin-top: 5rem;
+  }
+
+  &__social-link {
+    &:not(:last-child) {
+      margin-right: 3rem;
+    }
+  }
+
+  &__social-img {
+    height: 5rem;
+    &:hover {
+      animation: pulse 0.7s ease infinite;
+    }
+  }
+
+  &__next-box {
+    position: absolute;
+    bottom: 10%;
+
+    @include respond(phone) {
+      bottom: 15%;
+    }
+  }
+}
+
+.about {
+  background-image: linear-gradient(to left bottom, $color-bg-3, $color-bg-4);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.contact {
+  background-image: linear-gradient(to top right, $color-bg-3, $color-bg-4);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.portfolio {
+  background-image: linear-gradient(to top right, $color-bg-3, $color-bg-4);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.about {
+  padding-top: 5rem;
+}
+
+.portfolio,
+.contact {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.content {
+  max-width: 120rem;
+
+  @include respond(big-desktop) {
+    max-width: 190rem;
+  }
+  padding: 2rem;
+  margin: 0 auto;
+}
