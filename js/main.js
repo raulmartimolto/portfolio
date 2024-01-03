@@ -45,7 +45,7 @@ $(document).ready(function () {
   // * email para evitar bots
   var emailSpan = $('#email-span');
   var emailLink = $('#email-link');
-  var nombre = 'jorgemartiinez19';
+  var nombre = 'raulmarti9999';
   var arroba = '@';
   var dominio = 'gmail.com';
   emailSpan.text(nombre + arroba + dominio);
@@ -54,8 +54,8 @@ $(document).ready(function () {
   var telSpan = $('#tel-span');
   var telLink = $('#tel-link');
 
-  telSpan.text('6' + '0' + '5' + '5' + '1' + '5' + '4' + '6' + '7');
-  telLink.attr('href', 'tel:' + '6' + '0' + '5' + '5' + '1' + '5' + '4' + '6' + '7');
+  telSpan.text('6' + '0' + '1' + '2' + '4' + '4' + '5' + '5' + '9');
+  telLink.attr('href', 'tel:' + '6' + '0' + '1' + '2' + '4' + '4' + '5' + '5' + '9');
 });
 
 var tipoActivo = 'Todos';
